@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["ESNext", "DOM"],
+    "module": "commonjs",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "semi-solid-core": ["packages/semi-solid-core/src/index.ts"]
+    }
+  }
+}
