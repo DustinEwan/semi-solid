@@ -1,0 +1,13 @@
+{
+  "name": "react-semi-solid",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "semi-solid-core": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
