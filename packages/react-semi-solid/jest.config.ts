@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { readFileSync } from 'fs';
+import { readFileSync } from "fs";
 
 // Reading the SWC compilation config and remove the "exclude"
 // for the test files to be compiled by SWC
 const { exclude: _, ...swcJestConfig } = JSON.parse(
-  readFileSync(`${__dirname}/.swcrc`, 'utf-8')
+  readFileSync(`${__dirname}/.swcrc`, "utf-8")
 );
 
 // disable .swcrc look-up by SWC core because we're passing in swcJestConfig ourselves.
@@ -19,12 +19,12 @@ if (swcJestConfig.swcrc === undefined) {
 // swcJestConfig.module.noInterop = false;
 
 export default {
-  displayName: 'react-semi-solid',
-  preset: '../../jest.preset.js',
+  displayName: "react-semi-solid",
+  preset: "../../jest.preset.js",
   transform: {
-    '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
+    "^.+\\.[tj]sx?$": ["@swc/jest", swcJestConfig],
   },
-  moduleFileExtensions: ['ts', 'js', 'html'],
-  testEnvironment: 'node',
-  coverageDirectory: '../../coverage/packages/react-semi-solid',
+  moduleFileExtensions: ["tsx", "ts", "js", "html"],
+  testEnvironment: "jsdom",
+  coverageDirectory: "../../coverage/packages/react-semi-solid",
 };
