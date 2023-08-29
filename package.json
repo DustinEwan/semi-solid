@@ -2,7 +2,9 @@
   "name": "semi-solid",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
   "private": true,
   "devDependencies": {
     "@nx/eslint-plugin": "16.5.2",
