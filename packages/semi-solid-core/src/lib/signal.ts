@@ -26,6 +26,10 @@ export const createSignal = <T>(initialValue: T): Signal<T> => {
   return [
     getSignal,
     (newValue: T) => {
+      if (value === newValue) {
+        return;
+      }
+
       value = structuredClone(newValue);
 
       observers = observers.filter(([isActive]) => {
