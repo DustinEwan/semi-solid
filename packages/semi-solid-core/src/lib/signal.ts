@@ -14,7 +14,7 @@ export const createSignal = <T>(initialValue: T): Signal<T> => {
     if (
       currentEffect &&
       !observers.find(
-        ([isActive, fn]) => isActive() && fn === currentEffect![1]
+        ([isActive, fn]) => isActive() && fn === currentEffect?.[1]
       )
     ) {
       observers.push(currentEffect);

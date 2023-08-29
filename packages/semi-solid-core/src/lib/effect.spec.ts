@@ -58,7 +58,7 @@ describe('effects', () => {
   it('should execute when effect is monitoring a resource', async () => {
     const source = createSignal('Bob');
     const [, setSignal] = source;
-    let effectValue = 0;
+    let effectValue = '';
 
     const [nameLength] = createResource(source, (value: string) =>
       Promise.resolve(value.length)
