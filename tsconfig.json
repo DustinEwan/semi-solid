@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "paths": {
       "react-semi-solid": ["packages/react-semi-solid/src/index.ts"],
+      "semi-solid-components": ["packages/semi-solid-components/src/index.ts"],
       "semi-solid-core": ["packages/semi-solid-core/src/index.ts"]
     }
   }

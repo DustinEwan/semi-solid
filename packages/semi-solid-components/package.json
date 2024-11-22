@@ -1,0 +1,7 @@
+{
+  "name": "semi-solid-components",
+  "version": "0.0.1",
+  "dependencies": {
+    "semi-solid-core": "*"
+  }
+}

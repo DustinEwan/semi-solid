@@ -1,0 +1,43 @@
+{
+  "name": "semi-solid-components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/semi-solid-components/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/semi-solid-components/**/*.ts"]
+      }
+    },
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "main": "packages/semi-solid-components/src/index.ts",
+        "outputPath": "dist/packages/semi-solid-components",
+        "outputFileName": "main.js",
+        "tsConfig": "packages/semi-solid-components/tsconfig.lib.json",
+        "assets": [
+          {
+            "glob": "packages/semi-solid-components/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "platform": "node"
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
